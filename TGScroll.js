@@ -16,19 +16,14 @@
 	    TGScroll: function(func, options){
 	    	options = options || {};
 	    	//default params
-			var fireTime = null,
+			var timer = null,
+				fireTime = null,
 				delay = options.delay || 350;
 			//bind
-	    	$(window).on('scroll', function(){
-	    		var t = Date.now() - fireTime;
-	    		if( t < delay ){
-	    			fireTime = Date.now();
-	    			return;
-	    		}
-	    		else{
-	    			fireTime = Date.now();
-	    		}
-	    		func && func();
+	    	$(window).on('scroll', function(){	
+	    		( Date.now() - fireTime ) < delay && timer && clearTimeout(timer) && ( timer = null );
+	    		fireTime = Date.now();
+	    		typeof func == 'function' && ( timer = setTimeout(func, delay) );
 	    	});
 	    }
 	});
