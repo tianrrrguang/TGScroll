@@ -2,7 +2,28 @@
 	zepto scroll plugin for mobile
 	模仿iOS滚动时间
 	当连续滚动时不会触发onscroll，只有滚动停止后才触发
-	1
+	这是branch02
+	asdf
+	sdaf
+	sadf
+	asf
+	asd
+	fasf
+	sadf
+	asf
+	asdf
+	sad
+	g
+	dfg
+	sdf
+	gsdf
+
+	sfg
+	sd
+	gdfs
+
+	gdf
+	dsf
 */
 ;(function($){
 	//check zepto
